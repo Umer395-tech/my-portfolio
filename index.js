@@ -31,10 +31,39 @@ document.querySelectorAll('a, button').forEach(el => {
     cursor.style.background = 'var(--accent)';
   });
 });
+
+
+const navToggle = document.getElementById('navToggle');
+const navMobile = document.getElementById('navMobile');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('open');
+  navMobile.classList.toggle('open');
+});
+
+
+document.querySelectorAll('.nav-mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    navMobile.classList.remove('open');
+  });
+});
+
+
+document.addEventListener('click', e => {
+  if (!navToggle.contains(e.target) && !navMobile.contains(e.target)) {
+    navToggle.classList.remove('open');
+    navMobile.classList.remove('open');
+  }
+});
+
+
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -44,10 +73,13 @@ const revealObserver = new IntersectionObserver(entries => {
       if (bar) bar.style.width = bar.dataset.width + '%';
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 reveals.forEach(r => revealObserver.observe(r));
+
+
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+const mobileLinks = document.querySelectorAll('.nav-mobile-link');
 
 window.addEventListener('scroll', () => {
   let current = '';
@@ -59,8 +91,10 @@ window.addEventListener('scroll', () => {
   });
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+  mobileLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
   });
 });

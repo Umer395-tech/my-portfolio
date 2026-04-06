@@ -13,7 +13,7 @@
   <div class="cursor-follower" id="follower"></div>
 
   <nav id="navbar">
-    <div class="nav-logo">Umer.Dev<span>.</span></div>
+    <div class="nav-logo">dev<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -21,7 +21,20 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="https://wa.me/923101443121" target="_blank" class="nav-hire">💬 Hire Me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about" class="nav-mobile-link">About</a>
+    <a href="#skills" class="nav-mobile-link">Skills</a>
+    <a href="#projects" class="nav-mobile-link">Projects</a>
+    <a href="#contact" class="nav-mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
@@ -46,6 +59,22 @@
         <a href="https://wa.me/923101443121" target="_blank" class="btn btn-outline">💬 WhatsApp Me</a>
         <a href="Umer.pdf" download="Umer_Ameer_CV.pdf" class="btn btn-cv">⬇ Download CV</a>
       </div>
+
+      <!-- Inline badges for mobile/tablet -->
+      <div class="hero-badges-inline">
+        <div class="badge-inline">
+          <span class="badge-icon">⚡</span>
+          <div><div class="badge-label">Experience</div><div class="badge-value">3+ Years</div></div>
+        </div>
+        <div class="badge-inline">
+          <span class="badge-icon">🚀</span>
+          <div><div class="badge-label">Projects</div><div class="badge-value">20+ Done</div></div>
+        </div>
+        <div class="badge-inline">
+          <span class="badge-icon">✨</span>
+          <div><div class="badge-label">Stack</div><div class="badge-value">React · JS</div></div>
+        </div>
+      </div>
     </div>
 
     <div class="hero-badges">
@@ -53,14 +82,14 @@
         <span class="badge-icon">⚡</span>
         <div>
           <div class="badge-label">Experience</div>
-          <div class="badge-value">1+ Years</div>
+          <div class="badge-value">3+ Years</div>
         </div>
       </div>
       <div class="badge">
         <span class="badge-icon">🚀</span>
         <div>
           <div class="badge-label">Projects Done</div>
-          <div class="badge-value">10+ Projects</div>
+          <div class="badge-value">20+ Projects</div>
         </div>
       </div>
       <div class="badge">
@@ -77,6 +106,8 @@
       Scroll to explore
     </div>
   </section>
+
+  <!-- MARQUEE -->
   <div class="tools-section">
     <div class="marquee-track" id="marquee">
       <div class="marquee-item"><span>⚛️</span> React JS</div>
@@ -101,6 +132,8 @@
       <div class="marquee-item"><span>🌊</span> Tailwind CSS</div>
     </div>
   </div>
+
+  <!-- ABOUT -->
   <section id="about">
     <div class="section-label reveal">01 — About</div>
     <div class="section-title reveal">Passionate about building<br>exceptional web experiences.</div>
@@ -135,6 +168,8 @@
   </section>
 
   <div class="divider"></div>
+
+  <!-- SKILLS -->
   <section id="skills" class="skills-section">
     <div class="section-label reveal">02 — Skills</div>
     <div class="section-title reveal">My Technical Expertise</div>
@@ -185,6 +220,8 @@
   </section>
 
   <div class="divider"></div>
+
+  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-label reveal">03 — Projects</div>
     <div class="section-title reveal">Selected Work</div>
@@ -265,6 +302,8 @@
   </section>
 
   <div class="divider"></div>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="section-label reveal" style="justify-content:center;">04 — Contact</div>
     <div class="section-title reveal" style="text-align:center;">Let's Build Something<br>Amazing Together.</div>
